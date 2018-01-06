@@ -14,13 +14,13 @@ int OnInit()
 //---
    LoadScript(Pn,"test.py");
    int r=mtmul(3,6);
-   long x[2];
+   int x[2];
    x[0]=2;
    x[1]=5;
-   long y[2];
+   int y[2];
    y[0]=3;
    y[1]=4;
-   long z[2];
+   int z[2];
    mullist(x,y,z,2);
    Print(r," " ,z[0]," ",z[1]);
 //---
@@ -56,7 +56,7 @@ int mtmul(int x,int y)
    return (int)GetRezLong();
 }
 
-void mullist(long &x1[], long &y1[], long &z1[], int size)
+void mullist(int &x1[], int &y1[], int &z1[], int size)
 {
    NewArg(2);
    SetArgArrayLong(0,size,x1);
